@@ -1,0 +1,63 @@
+/* 
+    Name: Nupur Shah
+    SWE 642 : Homework 3
+    Custom CSS File
+*/
+
+/* Commom CSS */
+html,body{font-family:"Trebuchet MS", Helvetica, sans-serif;font-size:15px;line-height:1.5;background-color: #D8D8D8;margin: 0 ;} /* body of the window rendering your page should have a light gray background. */
+h1,h2,h3,h4,h5{font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;font-weight:500;margin:10px 0}
+h6{font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;font-weight:500;margin:5px 0; font-size:12px;}
+h1{color: #006633;} /* h1 elements in GMU Green */
+hr{border:0;border-top:1px solid #006633;margin:20px 0}
+.mason-logo img { vertical-align: middle; width: 100px; }
+.cs-content{margin-left:auto;margin-right:auto;max-width: 980px;background-color: #D8D8D8 !important;}
+.heading {color: #006633; border: 5px solid #006633; box-sizing: border-box; box-shadow: 5px 10px #FFCC33;padding-left: 7px;} /* heading at the top of the page should be inside a rectangular box with a solid border in GMU green (#006633) and 5px width. The box should use a box-shadow */
+/* END: Common CSS */
+
+/* Header and Footer */
+header { background-color: #006633; color: #FFFFFF; padding: 18px; font-size: 28px; font-weight: bold; text-align: left; margin-bottom: 50px;}
+header a { display: inline-block; vertical-align: middle; }
+header span { display: inline-block; vertical-align: middle; margin-right: 21px; }
+footer { background-color:  #006633; text-align: right; padding: 18px; margin-top: 50px; }
+footer a { display: inline-block; vertical-align: middle; }
+/* END: Header and Footer */
+
+/* CS Information Page */
+.cs-container{padding:0.01em 16px}
+.cs-table{border-collapse:collapse;border-spacing:0;width:90%;display:table;border:1px solid #006633}
+.cap-heading{font-size: 28px; font-weight: bold}
+.cs-ul.cs-hoverable li:hover{background-color:#ccc}
+.cs-table td,.cs-table th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top;border:1px solid #006633}
+.cs-ul{list-style-type: square;}.cs-ul li{padding:8px 16px;border-bottom:1px solid #ddd}.cs-ul li:last-child{border-bottom:none}
+.bg { background-color: #FFCC33; display: inline-flex; color: #006633}
+.slide { padding: 0; display: block; margin: 0 auto; max-height: 100%; max-width: 100%; }
+.tablehead { background-color: #FFCC33; }
+.volgenau ul { list-style-type: none; margin: 0; padding-left: 55px; padding-right: 25px; overflow: hidden; }
+.volgenau li { float: right; }
+.mid-section li a { display: block; padding: 8px; }
+.volgenau { background-color: #626664; }
+.mason-eng-logo img { vertical-align: middle; width: 200px; }
+.volgenau-logo { background-color: #006633; color: #FFFFFF; padding: 18px; font-size: 28px; font-weight: bold; text-align: left; }
+.content { background-color: #fdf3d7; }
+.mid-section li { float: left; margin-right: 15px;}
+/* END: CS Information Page */
+
+/* CS Survey Page */
+label{font-size: 16px;}
+button,input,select,textarea{font:inherit;margin:0}
+button,input{overflow:visible}
+button,select{text-transform:none}
+textarea{overflow:auto}
+.required:after { content:" *"; color: red; }
+.require { color: red; }
+[type=checkbox],[type=radio]{padding:0}
+.cs-input{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:50%}
+.cs-input:focus {outline:none !important;border:1px solid #006633;box-shadow: 0 0 10px #FFCC33}
+.cs-select{padding:9px 0;width:50%;border:none;border-bottom:1px solid #ccc}
+.cs-select:focus {outline:none !important;border:1px solid #006633;box-shadow: 0 0 10px #FFCC33}
+.cs-check,.cs-radio{width:24px;height:24px;position:relative;top:6px}
+.cs-check:focus,.cs-radio:focus {outline:none !important;border:1px solid #006633;box-shadow: 0 0 10px #FFCC33}
+.cs-button{display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:#006633;background-color:#FFCC33;text-align:center;cursor:pointer;white-space:nowrap}
+.cs-button:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+/* END: CS Survey Page */

@@ -1,0 +1,128 @@
+<!-- Name: Nupur Shah
+    SWE 642 : Homework 3
+    Student Survey Form
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Survey CS</title>
+	<!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="scripts/jquery-ui/jquery-ui.css" />
+	<!-- JQuery -->
+	<script type = "text/javascript" src="scripts/jquery.js"></script>
+	<script type = "text/javascript" src="scripts/jquery-ui/jquery-ui.js"></script>
+</head>
+<body>
+	<header>
+		<a href="https://www2.gmu.edu/" target="_blank" class="mason-logo"><img src="images/mason-logo.png" alt="Mason Logo"></a>
+        <span>Department of Computer Science</span>
+    </header>
+	<h1 class="heading cs-content">Student Survey Form</h1>
+	<p class="cs-content">
+		<span id="greetings"></span>
+	</p>
+	<form method="post" autocomplete="on" class="cs-content" name="surveyform" action="MyServlet">
+		<p class="require">* Required Fields</p>
+		<!-- Username, Address, Telephone, Email, URL, Date Of Survey details -->
+		<p><label for="username" class="required">Name: </label>
+			<input class="cs-input" type="text" name="username" id="username" required autofocus /></p>
+
+		<p><label for="stdid" class="required">Student ID: </label>
+			<input class="cs-input" type="text" name="stdid" id="stdid" required /></p>
+
+		<p><label for="street" class="required">Street address: </label>
+			<input class="cs-input" type="text" name="street" id="street" required /></p>
+
+		<p><label for="city" class="required">City: </label>
+			<input class="cs-input" type="text" name="city" id="city" required /></p>
+
+		<p><label for="state" class="required">State: </label>
+			<input class="cs-input" type="text" name="state" id="state" required /></p>
+
+		<p><label for="zip" class="required">Zip code: </label>
+			<input class="cs-input" type="number" name="zip" min="5" id="zip" required />
+			
+		<p><label for="telephone" class="required">Telephone: </label>
+			<input class="cs-input" type="tel" name="telephone" id="telephone" placeholder="***-***-****" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required /></p>
+
+		<p><label for="mail" class="required">Email: </label>
+			<input class="cs-input" type="email" name="mail" id="mail" placeholder="xyz@domain.com" required /></p>
+
+		<p><label for="websiteaddress">URL: </label>
+			<input class="cs-input" type="url" name="websiteaddress" id="websiteaddress" placeholder="http://www.domain.com" /></p>
+
+		<!-- Interested in University reasons -->
+		<p>Interested in the university because:<br/>
+			<input class="cs-radio" type="radio" name="intrestinuni" id="friends" value="Friends" />
+  			<label for="friends">Friends</label>
+
+  			<input class="cs-radio" type="radio" name="intrestinuni" id="television" value="Television" />
+  			<label for="television">Television</label>
+
+  			<input class="cs-radio" type="radio" name="intrestinuni" id="internet" value="Internet" />
+  			<label for="internet">Internet</label>
+
+  			<input class="cs-radio" type="radio" name="intrestinuni" id="other" value="Other" />
+  			<label for="other">Other</label>
+  		</p>
+
+  		<!-- Additional Comments -->
+  		<p><label for="additionalcomments">Additional comments: </label><br/>
+			<textarea class="cs-input" name="additionalcomments" id="additionalcomments" rows="5" cols="40">Enter comments here.</textarea></p>
+
+		<!-- High-school graduation month -->
+		<p><label for="highschlgradmonth">High-school graduation month-year:</label><br/>
+			<input class="cs-input" type="text" name="highschlgradmonth" id="highschlgradmonth" placeholder="Select Month" list="month" />
+			<datalist id="month">
+				<option value="January">
+				<option value="February">
+				<option value="March">
+				<option value="April">
+				<option value="May">
+				<option value="June">
+				<option value="July">
+				<option value="August">
+				<option value="September">
+				<option value="October">
+				<option value="November">
+				<option value="December">
+			</datalist>
+			<!-- High-school graduation year -->
+			<input type="number" class="cs-input" name="highschlgradyear" id="highschlgradyear" placeholder="Year" />
+		</p>
+
+		<!-- Likelihood of him/her recommending this school to other prospective students -->
+		<p><label for="recos" class="required">Recommending this school to other prospective students:</label><br/>
+			<select class="cs-select" name="recos" id="recos" required>
+				<option value="">Please select</option>
+				<option value="Very Likely">Very Likely</option>
+				<option value="Likely">Likely</option>
+				<option value="Unlikely">Unlikely</option>
+			</select>
+		</p>
+
+		<!-- Survey Form Extension and Average & Maximum Computation -->
+		<p><label for="data"></label>Data<br/>
+			<input class="cs-input" type="text" name="data" id="data" placeholder="1,2,3,4,5,6,7,8,9,10 [range 1-100]" />
+			<br>
+			<label id="error" class="require"></label>
+		</p>
+
+		<!-- Submit the form -->
+		<p><input type="submit" class="cs-button" value="Submit" id="submitbtn" />
+			<input type="reset" class="cs-button" value="Reset" />
+		</p>
+
+	</form>
+	<footer>
+		<a href="https://www2.gmu.edu/" target="_blank" class="mason-logo"><img src="images/mason-logo.png" alt="Mason Logo"></a>
+    </footer>
+</body>
+
+<script type = "text/javascript" src="scripts/script.js"></script>
+</html>
