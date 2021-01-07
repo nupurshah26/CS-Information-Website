@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<title>Nupur Shah</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">    
+    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#menu" class="w3-bar-item w3-button">BACKGROUND</a>
+    <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+    <a href="#assignment" class="w3-bar-item w3-button">ASSIGNMENT LINKS</a>
+  </div>
+</div>
+
+<!-- Assignment Links -->
+<div class="w3-container w3-padding-32 w3-blue-grey w3-grayscale-min w3-xlarge" id="assignment">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Assignment Links</h1>
+    <p class="w3-half"><a href="http://mason.gmu.edu/~nshah23/assignments/assignment1" target="_blank">Assignment 1</a></p>
+    <p class="w3-half"><a href="http://mason.gmu.edu/~nshah23/assignments/assignment2" target="_blank">Assignment 2</a></p>
+  </div>
+</div>
+  
+<!-- About Container -->
+<div class="w3-container w3-padding-32 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:44px">About</h1>
+    <img src="nupur.jpeg" style="width:46%; float:left;" class="w3-margin-top w3-margin-bottom" alt="Nupur Shah">
+    <p style="width:50%; float:right;">I am a graduate student at George Mason University in Information Systems. I did my Bachelor's in Computer Engineering from <a href="https://www.gtu.ac.in/" target="_blank">Gujarat Technological University</a>, Gujarat, India. I worked in the IT industry as a Software Engineer for about two years before I started masters.<br/>Fun Fact: My all-time favorite series is FRIENDS.</p>
+    </div>
+  </div>
+
+<!-- Background Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">BACKGROUND</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Education');" id="myLink">
+        <div class="w3-col s6 tablink w3-padding-large w3-hover-red">Education</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Work');">
+        <div class="w3-col s6 tablink w3-padding-large w3-hover-red">Work</div>
+      </a>      
+    </div>
+
+    <div id="Education" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Master of Science in Information Systems</b> <span class="w3-right w3-tag w3-dark-grey w3-round">Fall 2020</span></h1>
+      <p class="w3-text-grey">George Mason University</p>
+      <hr>
+   
+      <h1><b>Bachelor of Engineering in Computer Engineering</b> <span class="w3-right w3-tag w3-dark-grey w3-round">Jul 2013-Jun 2017</span></h1>
+      <p class="w3-text-grey">Gujarat Technological University,Ahmedabad, India<span class="w3-right w3-tag w3-dark-grey w3-round">GPA 4.0</span></p>
+
+    </div>
+
+    <div id="Work" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Software Engineer</b><span class="w3-right w3-tag w3-dark-grey w3-round">Apr 2017-Feb 2019</span></h1>
+      <p class="w3-text-grey">Biztech IT Consultancy Pvt. Ltd</p>
+      
+    </div>
+    <br>
+
+  </div>
+</div>
+
+<!-- Contact -->
+<div class="w3-container w3-padding-32 w3-blue-grey w3-grayscale-min w3-xlarge">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px" id="contact">Contact</h1>
+    <p>You can get in touch with me by my school email. </p>
+    <p><span class="w3-tag">Email: </span> <a href="mailto:nshah23@gmail.com">nshah23@gmu.edu</a></p>    
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-24 w3-xxlarge">
+  <p>&copy; Nupur Shah. 2020</p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
