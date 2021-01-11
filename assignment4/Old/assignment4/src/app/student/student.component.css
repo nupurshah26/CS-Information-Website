@@ -1,0 +1,110 @@
+.cs-content {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 980px;
+    background-color: #D8D8D8 !important;
+}
+.heading {
+    color: #006633;
+    border: 5px solid #006633;
+    box-sizing: border-box;
+    box-shadow: 5px 10px #FFCC33;
+    padding-left: 7px;
+}
+label {
+    font-size: 16px;
+}
+button,input,select,textarea {
+    font:inherit;margin:0
+}
+button,input {
+    overflow:visible
+}
+button,select {
+    text-transform:none
+}
+textarea {
+    overflow:auto
+}
+.required:after {
+    content:" *";
+    color: red;
+}
+.require {
+    color: red;
+}
+[type=checkbox],[type=radio] {
+    padding:0
+}
+.cs-input {
+    padding:8px;
+    display:block;
+    border:none;
+    border-bottom:1px solid #ccc;
+    width:50%
+}
+.cs-input:focus {
+    outline:none !important;
+    border:1px solid #006633;
+    box-shadow: 0 0 10px #FFCC33
+}
+.cs-select {
+    padding:9px 0;
+    width:50%;
+    border:none;
+    border-bottom:1px solid #ccc;
+}
+.cs-select:focus {
+    outline:none !important;
+    border:1px solid #006633;
+    box-shadow: 0 0 10px #FFCC33
+}
+.cs-check,.cs-radio {
+    width:18px;
+    height:18px;
+    position:relative;
+    top:6px
+}
+.cs-check:focus,.cs-radio:focus {
+    outline:none !important;
+    border:1px solid #006633;
+    box-shadow: 0 0 10px #FFCC33
+}
+.cs-button { 
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;color:#006633;
+    background-color:#FFCC33;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap
+}
+.cs-button:hover {
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+}
+.cs-container {
+    padding:0.01em 16px
+}
+.cs-table { 
+    border-collapse:collapse;
+    border-spacing:0;
+    width:90%;
+    display:table;
+    border:1px solid #006633
+}
+.cap-heading {
+    font-size: 28px; 
+    font-weight: bold
+}
+.cs-ul.cs-hoverable li:hover {
+    background-color:#ccc
+}
+.cs-table td,.cs-table th { 
+    padding:8px 8px;
+    display:table-cell;
+    text-align:left;
+    vertical-align:top;
+    border:1px solid #006633
+}

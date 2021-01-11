@@ -1,0 +1,227 @@
+<!-- AUTHOR: Nupur Shah
+    Student survey form
+-->
+
+<form [formGroup]="scheduleForm" class="cs-content" (ngSubmit)="onSubmit()" name="scheduleForm" id="surveyform">
+    <div class="surveydetails" *ngIf="showSuccess">
+    <h1 class="heading cs-content">Student Survey Form</h1>
+    <p class="require">* Required Fields</p>
+		<!-- Username, Address, Telephone, Email, URL, Date Of Survey details -->
+		<p><label for="username" class="required">Name: </label>
+			<input class="cs-input" type="text" name="username" id="username" formControlName="username" required autofocus mValidateOnBlur /></p>
+			<span *ngIf="username.invalid && (username.dirty || username.touched)" class="require">
+				<div *ngIf="username.errors.required">
+					Please enter Username.
+				</div>  
+				<div *ngIf="username.errors.pattern">
+					Please enter only the alphabets in the Username.
+				</div>
+			</span>
+
+		<p><label for="stdid" class="required">Student ID: </label>
+			<input class="cs-input" type="text" name="stdid" id="stdid" placeholder="Enter only numbers." formControlName="stdid" required mValidateOnBlur /></p>
+			<span *ngIf="stdid.invalid && (stdid.dirty || stdid.touched)" class="require">
+				<div *ngIf="stdid.errors.required">
+					Please enter Student id number.
+				</div>			
+			</span>
+
+		<p><label for="street" class="required">Street address: </label>
+			<input class="cs-input" type="text" name="street" id="street" formControlName="street" required mValidateOnBlur /></p>
+			<span *ngIf="street.invalid && (street.dirty || street.touched)" class="require">
+				<div *ngIf="street.errors.required">
+					Please enter Street address.
+				</div>  
+				<div *ngIf="street.errors.pattern">
+					Please enter only the alphanumeric in the Street address.
+				</div>
+			</span>
+
+		<p><label for="city" class="required">City: </label>
+			<input class="cs-input" type="text" name="city" id="city" formControlName="city" required mValidateOnBlur /></p>
+			<span *ngIf="city.invalid && (city.dirty || city.touched)" class="require">
+				<div *ngIf="city.errors.required">
+					Please enter City.
+				</div>			
+			</span>
+
+		<p><label for="state" class="required">State: </label>
+			<input class="cs-input" type="text" name="state" id="state" formControlName="state" required mValidateOnBlur /></p>
+			<span *ngIf="state.invalid && (state.dirty || state.touched)" class="require">
+				<div *ngIf="state.errors.required">
+					Please enter State.
+				</div>
+			</span>
+
+		<p><label for="zip" class="required">Zip code: </label>
+			<input class="cs-input" type="number" name="zip" min="5" id="zip" formControlName="zip" required mValidateOnBlur />
+			<span *ngIf="zip.invalid && (zip.dirty || zip.touched)" class="require">
+				<div *ngIf="zip.errors.required">
+					Please enter Zip.
+				</div>		
+				<div *ngIf="zip.errors.pattern">
+					Please enter only numbers in the Zip.
+				</div>	
+			</span>
+			
+		<p><label for="telephone" class="required">Telephone: </label>
+			<input class="cs-input" type="tel" name="telephone" id="telephone" formControlName="telephone" mValidateOnBlur placeholder="***-***-****" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required /></p>
+			<span *ngIf="telephone.invalid && (telephone.dirty || telephone.touched)" class="require">
+				<div *ngIf="telephone.errors.required">
+					Please enter Telephone.
+				</div>		
+				<div *ngIf="telephone.errors.pattern">
+					Please enter Telephone in valid pattern.
+				</div>	
+			</span>
+
+		<p><label for="mail" class="required">Email: </label>
+			<input class="cs-input" type="email" name="mail" id="mail" formControlName="mail" mValidateOnBlur placeholder="xyz@domain.com" required /></p>
+			<span *ngIf="mail.invalid && (mail.dirty || mail.touched)" class="require">
+				<div *ngIf="mail.errors.required">
+					Please enter Email id.
+				</div>
+				<div *ngIf="mail.errors.pattern">
+					Please enter a valid email id.
+				</div>	
+			</span>
+
+		<p><label for="websiteaddress">URL: </label>
+			<input class="cs-input" type="url" name="websiteaddress" id="websiteaddress" formControlName="websiteaddress" placeholder="http://www.domain.com" /></p>
+        
+        <p><label for="sdate">Date of Survey: </label>
+            <input class="cs-input" type="date" name="sdate" id="sdate" formControlName="sdate" /></p>
+    
+        <!-- Visitor Liked the most about campus -->
+        <p>Liked most about the campus:<br/>
+            <input class="cs-check" type="checkbox" name="likedabtcampus" id="students" value="Students" (change)="onCheckboxChange($event, 'Students')"/>&nbsp;
+            <label for="students">Students</label>&nbsp;
+			
+            <input class="cs-check" type="checkbox" name="likedabtcampus" id="location" value="Location" (change)="onCheckboxChange($event, 'Location')"/>&nbsp;
+            <label for="location">Location</label>&nbsp;
+			
+            <input class="cs-check" type="checkbox" name="likedabtcampus" id="campus" value="Campus" (change)="onCheckboxChange($event, 'Campus')"/>&nbsp;
+            <label for="campus">Campus</label>&nbsp;
+			
+            <input class="cs-check" type="checkbox" name="likedabtcampus" id="atmosphere" value="Atmosphere" (change)="onCheckboxChange($event, 'Atmosphere')"/>&nbsp;
+            <label for="atmosphere">Atmosphere</label>&nbsp;
+			
+            <input class="cs-check" type="checkbox" name="likedabtcampus" id="dormrooms" value="Dorm rooms" (change)="onCheckboxChange($event, 'Dorm rooms')"/>&nbsp;
+            <label for="dormrooms">Dorm rooms</label>&nbsp;
+			
+            <input class="cs-check" type="checkbox" name="likedabtcampus" id="sports" value="Sports" (change)="onCheckboxChange($event, 'Sports')"/>&nbsp;
+            <label for="sports">Sports</label> 
+        </p>
+
+		<!-- Interested in University reasons -->
+		<p>Interested in the university because:<br/>
+			<input class="cs-radio" type="radio" formControlName="intrestinuni" name="intrestinuni" id="friends" value="Friends" />&nbsp;
+  			<label for="friends">Friends</label>&nbsp;
+
+  			<input class="cs-radio" type="radio" formControlName="intrestinuni" name="intrestinuni" id="television" value="Television" />&nbsp;
+  			<label for="television">Television</label>&nbsp;
+			
+  			<input class="cs-radio" type="radio" formControlName="intrestinuni" name="intrestinuni" id="internet" value="Internet" />&nbsp;
+  			<label for="internet">Internet</label>&nbsp;
+			
+  			<input class="cs-radio" type="radio" formControlName="intrestinuni" name="intrestinuni" id="other" value="Other" />&nbsp;
+  			<label for="other">Other</label>
+  		</p>
+
+  		<!-- Additional Comments -->
+  		<p><label for="additionalcomments">Additional comments: </label><br/>
+			<textarea class="cs-input" name="additionalcomments" id="additionalcomments" formControlName="additionalcomments" rows="5" cols="40">Enter comments here.</textarea></p>
+
+		<!-- High-school graduation month -->
+		<p><label for="highschlgradmonth">High-school graduation month-year:</label><br/>
+			<input class="cs-input" type="text" name="highschlgradmonth" id="highschlgradmonth" formControlName="highschlgradmonth" placeholder="Select Month" list="month" mValidateOnBlur/>
+			<datalist id="month">
+				<option value="January">
+				<option value="February">
+				<option value="March">
+				<option value="April">
+				<option value="May">
+				<option value="June">
+				<option value="July">
+				<option value="August">
+				<option value="September">
+				<option value="October">
+				<option value="November">
+				<option value="December">
+			</datalist>
+			<!-- High-school graduation year -->
+			<input type="number" class="cs-input" name="highschlgradyear" id="highschlgradyear" formControlName="highschlgradyear" placeholder="Year" mValidateOnBlur />
+		</p>
+
+		<!-- Likelihood of him/her recommending this school to other prospective students -->
+		<p><label for="recos">Recommending this school to other prospective students:</label><br/>
+			<select class="cs-select" name="recos" id="recos" formControlName="recos">
+				<option value="">Please select</option>
+				<option value="Very Likely">Very Likely</option>
+				<option value="Likely">Likely</option>
+				<option value="Unlikely">Unlikely</option>
+			</select>
+		</p>
+
+		<!-- Survey Form Extension and Average & Maximum Computation -->
+		<p><label for="data" class="required">Data</label><br/>
+			<input class="cs-input" type="text" formControlName="data" name="data" id="data" placeholder="1,2,3,4,5,6,7,8,9,10 [range 1-100]" formnovalidate />
+			<br>
+			<span *ngIf="datad.invalid && (datad.dirty || datad.touched)" class="require">
+				<div *ngIf="datad.errors.required">
+					Please enter Data.
+				</div>
+			</span>
+		</p>
+
+		<!-- Submit the form -->
+		<p><button (click)="submit()" type="button" class="cs-button" value="Submit" id="submitbtn" >Submit</button>
+        </p>
+    </div>
+</form>
+
+<!-- Simple acknowledgement display -->
+
+<div *ngIf="showSimpleAcknowledgement" class="cs-content">
+    <h2>Thank you for filling out the form!</h2>
+    <h3>Your form has been submitted successfully.</h3>
+
+    <p> Mean: {{mean}} </p>
+    <p>	Standard Deviation: {{sd}} </p>
+
+    <table class="cs-container cs-table">
+		<caption class="cs-container cap-heading">Student Data</caption>
+		<thead class="tablehead">
+			<tr>
+				<th>Student IDs</th>
+			</tr>
+		</thead>
+		    <tr *ngFor="let id of students">
+			    <td><a [routerLink]="['/stdDetail', id]">{{id}}</a></td>
+		    </tr>
+	</table>
+</div>
+
+<!-- Winner acknowledgement display -->
+
+<div class="cs-content" *ngIf="showWinnerAcknowledgement">
+    <h2>Congratulations!! You are a raffle winner. You have won two movie tickets!</h2>
+    <h3>Thank you for filling out the form. Your form has been submitted successfully.</h3>
+    
+    <p> Mean: {{mean}} </p>
+    <p>	Standard Deviation: {{sd}} </p>
+
+    <table class="cs-container cs-table">
+		<caption class="cs-container cap-heading">Student Data</caption>
+		<thead class="tablehead">
+			<tr>
+				<th>Student IDs</th>
+			</tr>
+		</thead>
+		<tr *ngFor="let id of students">
+			<td><a [routerLink]="['/stdDetail', id]">{{id}}</a></td>
+		</tr>
+	</table>
+</div>
+
+<router-outlet></router-outlet>

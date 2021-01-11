@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+footer { 
+    width: 99%;
+    background-color:  #006633; 
+    text-align: right; 
+    padding: 18px; 
+    margin-top: 50px; 
+}
+footer a { 
+    display: inline-block; 
+    vertical-align: middle; 
+}
+.mason-logo img { 
+    vertical-align: middle; 
+    width: 100px;
+}

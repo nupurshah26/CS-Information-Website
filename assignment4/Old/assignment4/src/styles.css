@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+html,body {
+    font-family:"Trebuchet MS", Helvetica, sans-serif;
+    font-size:15px;
+    line-height:1.5;
+    background-color: #D8D8D8;
+    margin: 0 ;
+}
+h1,h2,h3,h4,h5 {
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight:500;
+    margin:10px 0
+}
+h6 {
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight:500;
+    margin:5px 0;
+    font-size:12px;
+}
+h1 { 
+    color: #006633;
+}
+hr {
+    border:0;
+    border-top:1px solid #006633;
+    margin:20px 0
+}

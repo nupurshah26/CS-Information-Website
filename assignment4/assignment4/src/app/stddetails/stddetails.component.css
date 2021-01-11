@@ -1,0 +1,26 @@
+.cs-container {
+    padding:0.01em 16px
+}
+.cs-table {
+    border-collapse:collapse;
+    border-spacing:0;
+    width:90%;
+    display:table;
+    border:1px solid #006633
+}
+.cs-content {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 980px;
+    background-color: #D8D8D8 !important
+}
+.cap-heading {
+    font-size: 28px; 
+    font-weight: bold
+}
+.cs-ul.cs-hoverable li:hover {
+    background-color:#ccc
+}
+.cs-table td,.cs-table th {
+    padding:8px 8px;display:table-cell;text-align:left;vertical-align:top;border:1px solid #006633
+}
